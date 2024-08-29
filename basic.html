@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <style>
+    body{
+        background-color: gray;
+        font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+    function App(){
+        return(
+            <>
+            <div style={{border:"1px solid white",padding:"30px",borderRadius:"20px", backgroundColor:"white"}}>
+                <center>
+                    <img src="bell.png" alt="bell" />
+                    <h1 style={{fontWeight: "900"}}>SUBSCRIBE</h1>
+                    <h4 style={{color:"gray"}}>Subscribe to our newsletter & stay up to date.</h4>
+                    <input type="text" placeholder="john@dot.net" style={{borderRadius:"20px", padding:"10px 30px" ,border:"none", backgroundColor:"#edf2f6"}}/>
+                    <button style={{backgroundColor:"blue", color:"white",padding:"10px 20px",borderRadius:"20px",border:"none",marginLeft:"30px"}}>Subscribe</button>
+                </center>
+            </div>
+            </>
+        )
+    }
+    const Root = ReactDOM.createRoot(document.getElementById("root"))
+    Root.render(<App/>)
+    </script>
+  </body>
+</html>
